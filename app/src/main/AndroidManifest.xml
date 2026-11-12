@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissions -->
+    <!-- Foreground service permission -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Required for MediaProjection foreground service on API 31+ -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <!-- Post notifications for foreground service notification -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Optional: System alert window for floating window overlay -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- MediaProjection implicitly requires CAPTURE_VIDEO_OUTPUT -->
+    <!-- No explicit permission needed, user grants via system dialog -->
+
+    <application
+        android:name=".ScreenTextOCRApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ScreenTextOCR">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".presentation.view.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.ScreenTextOCR">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Foreground Service for Screen Capture -->
+        <service
+            android:name=".service.foreground.ScreenCaptureForegroundService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection">
+            <intent-filter>
+                <action android:name="com.screentextocr.service.FOREGROUND_SERVICE_SCREEN_CAPTURE" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,146 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Keystore files
+*.jks
+*.keystore
+
+# Android Studio Navigation files
+navigation.json
+
+# Fake signature
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Proguard folder
+proguard/
+
+# Log Files
+*.log
+
+# Android Studio
+*.swp
+*~
+.navigation/
+captures/
+output.json
+
+# IntelliJ
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# CMake
+cmake-build-debug/
+
+# Fake signing
+*.jks
+*.keystore
+
+# External native build folder
+.externalNativeBuild
+
+# Google Services (optional)
+/google-services.json
+
+# Freeline
+freeline.py
+freeline/
+freeline_project_description.json
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# Version control
+.svn/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+.tmp/
+
+# IDE
+.vscode/
+
+# Project specific
+*.apk
+*.ap_
+*.aab
+*bundle*
+*.keystore
+/captures/
+/output/
+output/
+
+# Local state and credentials
+.env
+.env.*
+!.env.example
+cookies*.json
+cookies*.txt
+local.properties
+*.jks
+*.keystore
+.venv/
+venv/
+__pycache__/
+.gradle/
+build/
+node_modules/
+douyin-data/
+verification-private/
+.test-runs/
